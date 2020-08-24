@@ -34,14 +34,14 @@ const App = () => {
      */
 
      setPosts(posts.map((data) => {
-       if(posts.id === postId){
+       if(data.id === postId){
          //const copy = [...posts];
          //console.log(copy);
          //const useThis = copy.splice(0, 1);
-         return {...data.likes + 1};
+         return {...data, likes: data.likes + 1};
          //console.log(useThis);
        }else{
-         return posts;
+         return data; //posts;
        }
      }));
   };
